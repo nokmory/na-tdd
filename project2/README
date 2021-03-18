@@ -1,0 +1,14 @@
+UT&TDD project2
+
+maciej.kasperski@nokia.com
+Nokia (c) 2019
+
+Tic-tac-toe implementation in TDD.
+
+Ground rules:
+- TDD!
+- Encapsulation -- all fields (class variables) should be private.
+- Divide your code into .hpp and .cpp files.
+- Board is square, but can be bigger than 3x3.
+- Winning follows standard rules.
+- If you have a problem, ask for help!

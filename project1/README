@@ -1,0 +1,13 @@
+UT&TDD project1
+
+maciej.kasperski@nokia.com
+Nokia (c) 2019
+
+Simple examples to demonstrate basic UT usage using gtest.
+
+Order of execution:
+0. findInVector
+1. stringLib
+2. quadraticEquation
+3. stableSort
+4. fileManipulator
