@@ -1,6 +1,5 @@
 SET(SRCS
     src/board.cpp
-    src/field.cpp
     src/game.cpp
     src/player.cpp
 )
@@ -8,7 +7,6 @@ SET(SRCS
 SET(UT_SRCS
     uts/ut.cpp
     uts/boardTest.cpp
-    uts/fieldTest.cpp
     uts/gameTest.cpp
     uts/playerTest.cpp
 )

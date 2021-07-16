@@ -12,3 +12,11 @@ add_subdirectory(project2)
 enable_testing()
 add_test(TiTaToTests project2/TiTaToTests)
 add_test(tests_for_legacy project1/tests_for_legacy)
+
+add_custom_target(tests1
+                  COMMAND "./project1/tests_for_legacy"
+                  DEPENDS tests_for_legacy)
+
+add_custom_target(tests2
+                  COMMAND "./project2/TiTaToTests"
+                  DEPENDS TiTaToTests)
