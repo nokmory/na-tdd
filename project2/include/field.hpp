@@ -1,9 +1,5 @@
 #pragma once
 
-enum class FieldState
-{
-};
-
-class Field
+enum class Field
 {
 };

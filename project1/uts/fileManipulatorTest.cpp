@@ -1,7 +1,8 @@
 #include "gtest/gtest.h"
 #include "fileManipulator.hpp"
 
-// https://github.com/google/googletest/blob/master/googletest/docs/advanced.md <- here you can find how to check for exceptions, but where will FileManipulator throw an exception?
+// https://github.com/google/googletest/blob/master/docs/reference/assertions.md#exception-assertions-exceptions
+// ^-- here you can find how to check for exceptions, but where will FileManipulator throw an exception?
 
 class FileManipulatorTest : public ::testing::Test
 {
