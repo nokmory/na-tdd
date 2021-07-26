@@ -1,6 +1,6 @@
 #pragma once
-
-enum class Field;
+#include <vector>
+#include "field.hpp"
 
 struct Coordinates
 {
@@ -16,13 +16,16 @@ public:
     virtual void put(const Coordinates&, Field) = 0;
 };
 
+using Columns = std::vector<Field>;
+using Fields = std::vector<Columns>;
+
 class Board : public BoardI
 {
 public:
-    Board();
+    Board() = default;
     Field at(const Coordinates&) const override;
     void put(const Coordinates&, Field) override;
 
 private:
-    Field field12;
+    Fields fields = Fields(3, Columns(3, Field::EMPTY));
 };

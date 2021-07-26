@@ -42,7 +42,6 @@ TEST_F(BoardTest, whenXPutOnEmptyCoodinate1and2ThenXIsReturnedForThisCoordinate)
     EXPECT_EQ(sut.at({1, 2}), Field::X);
 }
 
-/*
 TEST_F(BoardTest, whenXPutOnEmptyCoodinate0and0ThenXIsReturnedForThisCoordinate)
 {
     Board sut;
@@ -51,4 +50,3 @@ TEST_F(BoardTest, whenXPutOnEmptyCoodinate0and0ThenXIsReturnedForThisCoordinate)
 
     EXPECT_EQ(sut.at({0, 0}), Field::X);
 }
-*/

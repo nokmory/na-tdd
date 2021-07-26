@@ -1,15 +1,12 @@
 #include "board.hpp"
 #include "field.hpp"
 
-Board::Board() : field12{Field::EMPTY} {}
-
 Field Board::at(const Coordinates& coords) const
 {
-    if (coords.x == 1 and coords.y == 2) return field12;
-    return Field::EMPTY;
+    return fields[coords.x][coords.y];
 }
 
-void Board::put(const Coordinates&, Field symbol)
+void Board::put(const Coordinates& coords, Field symbol)
 {
-    field12 = symbol;
+    fields[coords.x][coords.y] = symbol;
 }
