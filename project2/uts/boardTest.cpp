@@ -2,6 +2,19 @@
 #include "board.hpp"
 #include "field.hpp"
 
+std::ostream &operator<<(std::ostream &str, Field field)
+{
+    switch (field)
+    {
+    case Field::Empty:
+        return str << "Empty";
+    case Field::O:
+        return str << "O";
+    default:
+        return str << "Unknown";
+    }
+}
+
 class BoardTest : public ::testing::Test
 {
 };
