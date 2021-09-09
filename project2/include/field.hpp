@@ -2,5 +2,6 @@
 
 enum class Field
 {
-    Empty
+    Empty,
+    O
 };
