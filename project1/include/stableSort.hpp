@@ -14,7 +14,7 @@ void stableSort(std::vector<T> &vec)
 
         for (size_t i = start + 1; i < vec.size(); ++i)
         {
-            if (vec[minValuePos] >= vec[i])
+            if (vec[minValuePos] > vec[i])
             {
                 minValuePos = i;
             }
