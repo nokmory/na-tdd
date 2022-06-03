@@ -13,17 +13,30 @@ class QuadraticEquationTest : public ::testing::Test
     void TearDown() override {};
 };
 
-TEST_F(QuadraticEquationTest, change_this_name)
+using Solution = std::pair<unsigned, std::pair<float, float>>;
+
+// // 0x^2 + 0x + 0 =0
+// TEST_F(QuadraticEquationTest, Equation0XSquaredPlus0XPlus0HasSingleSoultionIn0)
+// {
+//     Solution expectedSolution{1,{0, 0}};
+
+//     EXPECT_EQ(expectedSolution, utils::quadraticEquation(0,0,0));
+// }
+
+// x^2 + 0x - 1 = 0
+TEST_F(QuadraticEquationTest, EquationXSquaredPlus0XMinus1HasTwoSoultionsInMinus1AndPlus1)
 {
+    Solution expectedSolution{2,{-1, 1}};
+
+    EXPECT_EQ(expectedSolution, utils::quadraticEquation(1,0,-1));
 
 }
 
-TEST_F(QuadraticEquationTest, change_this_name2)
+// (x - 5)(x + 4) = x^2 -x -20 = 0
+TEST_F(QuadraticEquationTest, EquationXSquaredMinusXMinus20HasTwoSoultionsInMinus4AndPlus5)
 {
+    Solution expectedSolution{2,{-4, 5}};
 
-}
-
-TEST_F(QuadraticEquationTest, change_this_name3)
-{
+    EXPECT_EQ(expectedSolution, utils::quadraticEquation(1,-1,-20));
 
 }
