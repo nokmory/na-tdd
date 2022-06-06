@@ -9,12 +9,18 @@ struct Size
     unsigned height;
 };
 
+struct Coordinates
+{
+    int x;
+    int y;
+};
+
 class BoardI
 {
 public:
     virtual Size getSize() const = 0;
-    virtual Field getFieldState(int, int) const =0;
-    virtual void setFieldState(int, int, Field) = 0;
+    virtual Field getFieldState(const Coordinates&) const =0;
+    virtual void setFieldState(const Coordinates&, Field) = 0;
     virtual ~BoardI() = default;
 };
 
@@ -23,8 +29,8 @@ class Board : public BoardI
 public:
     Board(const Size& size): size(size){}
     Size getSize() const override;
-    Field getFieldState(int, int) const override;
-    void setFieldState(int, int, Field) override;
+    Field getFieldState(const Coordinates&) const override;
+    void setFieldState(const Coordinates&, Field) override;
     ~Board() = default;
 private:
     Size size;

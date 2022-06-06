@@ -39,13 +39,13 @@ TEST_F(BoardTest, givenFresh3By3BoardWhenStateOfUpperLeftfieldIsCheckedItReturns
 {
     Board board{Size{3,3}};
 
-    EXPECT_EQ(board.getFieldState(0,0), Field::Empty);
+    EXPECT_EQ(board.getFieldState({0,0}), Field::Empty);
 }
 
 TEST_F(BoardTest, givenStateOfUpperLeftfieldIsSetToXCheckedItReturnsX)
 {
     Board board{Size{3,3}};
-    board.setFieldState(0,0,Field::X);
+    board.setFieldState({0,0},Field::X);
 
-    EXPECT_EQ(board.getFieldState(0,0), Field::X);
+    EXPECT_EQ(board.getFieldState({0,0}), Field::X);
 }
