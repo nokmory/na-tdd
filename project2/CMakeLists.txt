@@ -13,6 +13,8 @@ SET(UT_SRCS
 
 add_library(TiTaTo ${SRCS})
 target_include_directories(TiTaTo PUBLIC include)
+target_compile_features(TiTaTo PUBLIC cxx_std_20)
 
 add_executable(TiTaToTests ${UT_SRCS})
 target_link_libraries(TiTaToTests TiTaTo gtest gmock_main gmock)
+target_compile_features(TiTaToTests PUBLIC cxx_std_20)
