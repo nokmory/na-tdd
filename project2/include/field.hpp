@@ -2,4 +2,6 @@
 
 enum class Field
 {
+    Empty,
+    X
 };
