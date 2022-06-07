@@ -10,5 +10,5 @@ public:
     InputMock() = default;
     ~InputMock() override = default;
 
-    MOCK_CONST_METHOD0(getInput, std::pair<std::size_t, std::size_t>());
+    MOCK_METHOD((std::pair<std::size_t, std::size_t>), getInput, (), (const, override));
 };
